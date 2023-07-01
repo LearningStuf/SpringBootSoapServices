@@ -18,6 +18,7 @@ public class CartEndpoint {
     public PostCartResponse postCart(@RequestPayload PostCartRequest request) {
         PostCartResponse response = new PostCartResponse();
         response.setMessage("This is a success");
+        response.setCartSubmissionRequest(request.getCartSubmissionRequest());
         return response;
     }
 }
