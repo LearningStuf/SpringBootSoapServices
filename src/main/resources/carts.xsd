@@ -1,0 +1,22 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://spring.io/guides/gs-producing-web-service-cart"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service-cart" elementFormDefault="qualified">
+
+    <xs:element name="postCartRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="product_id" type="xs:string"/>
+                <xs:element name="quantity" type="xs:integer"/>
+                <xs:element name="user_id" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="postCartResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
